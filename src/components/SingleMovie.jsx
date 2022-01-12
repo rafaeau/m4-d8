@@ -9,6 +9,7 @@ import {
   Alert,
 } from "react-bootstrap";
 import CommentsList from "./CommentsList";
+import { withRouter } from "react-router-dom"
 
 class SingleMovie extends Component {
   state = {
@@ -98,6 +99,11 @@ class SingleMovie extends Component {
             this.fetchComments(this.props.data.imdbID);
           }}
         />
+        <Button onClick={() =>
+        this.props.history.push('/details/' + this.props.data.imdbID)
+        }>
+          Details
+        </Button>
         <Modal
           show={this.state.selected}
           onHide={() => this.setState({ selected: !this.state.selected })}
@@ -189,4 +195,4 @@ class SingleMovie extends Component {
   }
 }
 
-export default SingleMovie;
+export default withRouter(SingleMovie);
