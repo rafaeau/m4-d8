@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Navbar, Nav, InputGroup, FormControl } from "react-bootstrap";
+import { Link } from 'react-router-dom'
 
 class MyNavbar extends Component {
   state = {
@@ -28,11 +29,11 @@ class MyNavbar extends Component {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link active className="font-weight-bold" href="/">
+            <Nav.Link className="font-weight-bold" href="/">
               Home
             </Nav.Link>
-            <Nav.Link className="font-weight-bold" href="/">
-              TV Shows
+            <Nav.Link className="font-weight-bold text-white" href="/">
+              <Link to="/tv-shows" className="text-white">TV Shows</Link>
             </Nav.Link>
             <Nav.Link className="font-weight-bold" href="/">
               Movies

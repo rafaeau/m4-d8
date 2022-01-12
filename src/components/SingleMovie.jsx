@@ -99,7 +99,7 @@ class SingleMovie extends Component {
             this.fetchComments(this.props.data.imdbID);
           }}
         />
-        <Button onClick={() =>
+        <Button className="mt-3" variant="dark" onClick={() =>
         this.props.history.push('/details/' + this.props.data.imdbID)
         }>
           Details
